@@ -1,0 +1,15 @@
+﻿@model Actor
+<div class="card mb-3" style="width: 100%;">
+    <div class="row g-0 align-items-start">
+        <div class="col-md-12 d-flex justify-content-start">
+            <img src="~/images/cast/@Model.ProfilePicture" class="rounded-circle" style="width: 60px; height: 60px; margin: 0;" alt="@Model.FirstName">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" style="padding: 0;">
+                <h5 class="card-title" style="margin: 0; padding-left: 10px;">@Model.FirstName</h5>
+                <p class="card-text" style="margin: 0; padding-left: 10px;">Bio: @Model.Bio</p>
+                <p class="card-text" style="margin: 0; padding-left: 10px;"><a href="#">Social Media</a></p>
+            </div>
+        </div>
+    </div>
+</div>

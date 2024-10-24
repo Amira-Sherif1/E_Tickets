@@ -1,0 +1,35 @@
+﻿
+    @model Movie
+
+    
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="~/images/movies/@Model.ImgUrl" class="img-fluid rounded-start" alt="@Model.Name">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="card-header">@Model.Name</div>
+                    <p class="card-text">@Model.Description</p>
+                    <p class="card-text">Price: @Model.Price</p>
+                    <p class="card-text">Cinema: @Model.Cinema.Name </p>
+                    <p class="card-text">Start Date: @Model.StartDate</p>
+                    <p class="card-text">End Date: @Model.EndDate</p>
+                    <p class="card-text">Category: @Model.Category.Name </p>
+                    <p class="card-text">
+                    @foreach (var act in Model.Actors)
+                    {
+                            <a href="/Actors/Index?Id=@act.Id"><img src="~/images/cast/@act.ProfilePicture" class="img-fluid rounded-start" alt="@act.ProfilePicture" /></a>
+                    
+                    }
+                    </p>
+                    <p class="card-text">
+                        <button type="button" class="btn btn-success">Book Ticket</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

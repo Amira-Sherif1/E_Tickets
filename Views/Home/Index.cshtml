@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Movie>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="card-header">@item.Name</div>
+                        <div class="col-md-4">
+                            <img src="~/images/movies/@item.ImgUrl" class="img-fluid rounded-start" alt="@item.Name">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text">Price: @item.Price</p>
+                                <p class="card-text">Cinema: @item.Cinema.Name</p>
+                                <p class="card-text">Start Date: @item.StartDate</p>
+                                <p class="card-text">End Date: @item.EndDate</p>
+                                <p class="card-text">Category: <a href="/Categories/DisplayMovies?Id=@item.CategoryId">@item.Category.Name</a></p>
+                                <p class="card-text">
+                                    <button type="button" class=" btn btn-dark">@item.MovieStatus</button>
+                                </p>
+                                <p class="card-text">
+                                        <a href="/Home/Details?Id=@item.Id"><button type="button" class="btn btn-primary">More Details</button></a>
+                                    
+                                 <class="card-text"><button type="button" class="btn btn-success">Book Ticket</button></p>
+
+                            </div>
+                            
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+ 
+
+    
+
+@* @foreach(var item in Model)
+{
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+
+            <div class="card-header">@item.Name</div>
+            <div class="col-md-4">
+                <img src="~/images/movies/@item.ImgUrl" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text">Price:@item.Price</p>
+                    <p class="card-text">Start Date:@item.StartDate</p>
+                    <p class="card-text">Price:End Date:@item.EndDate</p>
+                    <p class="card-text"><a>Category:@item.Category.Name</a></p>
+                    <p class="card-text"><button type="button">@item.MovieStatus</button></p>
+                </div>
+                <div>
+                    <button type="button">More Details</button>
+                    <button type="button">Book Ticket</button>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+} *@
+
+    
+
+ 

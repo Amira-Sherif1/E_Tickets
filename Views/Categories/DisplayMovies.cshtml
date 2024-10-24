@@ -1,0 +1,43 @@
+﻿@model List<Movie>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="card-header">@item.Name</div>
+                        <div class="col-md-4">
+                            <img src="~/images/movies/@item.ImgUrl" class="img-fluid rounded-start" alt="@item.Name">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <p class="card-text">Price: @item.Price</p>
+                                <p class="card-text">Cinema: @item.Cinema.Name</p>
+
+                                <p class="card-text">Start Date: @item.StartDate</p>
+                                <p class="card-text">End Date: @item.EndDate</p>
+                                <p class="card-text">Category: <a href="..">@item.Category.Name</a></p>
+                                <p class="card-text">
+                                    <button type="button" class=" btn btn-dark">@item.MovieStatus</button>
+                                </p>
+                                <p class="card-text">
+                                    <button type="button" class="btn btn-primary">More Details</button>
+
+                                    <class ="card-text"><button type="button" class="btn btn-success">Book Ticket</button>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+

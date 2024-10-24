@@ -1,0 +1,23 @@
+﻿@model List<Category>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="row">@item.Name</td>
+                <td><a href="/Categories/DisplayMovies?Id=@item.Id">All Movies</a></td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
